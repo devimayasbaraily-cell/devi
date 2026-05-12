@@ -390,6 +390,12 @@ npm run build
 # Drag the dist folder to Netlify
 ```
 
+If you deploy a client-side React app with Netlify, add a `_redirects` file to the project root with this rule:
+
+```text
+/* /index.html 200
+```
+
 ### Deploy to Vercel
 ```bash
 # Connect your GitHub repo to Vercel
