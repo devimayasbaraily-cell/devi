@@ -28,7 +28,7 @@ function Navbar() {
       <div className="nav-container">
         {/* Logo and Brand Name */}
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-          <img src="./logo1.png" alt="Bhutan Travel Explorer" className="logo-image" />
+          <img src="/logo1.png" alt="Bhutan Travel Explorer" className="logo-image" />
           Bhutan Travel Explorer
         </Link>
 
