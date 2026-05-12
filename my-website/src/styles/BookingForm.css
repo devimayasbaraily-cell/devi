@@ -1,0 +1,214 @@
+/* Booking Form Page Styles */
+
+.booking-form-page {
+  width: 100%;
+  padding-bottom: 3rem;
+}
+
+.booking-form-page .page-header {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+/* Booking Form */
+.booking-form {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  border: 2px solid var(--border-color);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+legend {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  padding: 0 0.5rem;
+}
+
+.booking-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.booking-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: var(--font-family);
+  transition: border-color 0.3s ease;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+}
+
+.booking-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Checkbox styling */
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.checkbox input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.75rem;
+  margin-top: 0;
+  cursor: pointer;
+}
+
+.checkbox label {
+  margin-bottom: 0;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.error-message {
+  color: var(--error-color);
+  font-size: 0.85rem;
+  margin-top: 0.35rem;
+  display: block;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--border-color);
+}
+
+.form-actions .btn {
+  flex: 1;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Success Message */
+.success-message {
+  background-color: #d1fae5;
+  border: 2px solid var(--success-color);
+  color: #065f46;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  text-align: center;
+}
+
+.success-message h2 {
+  color: #065f46;
+  font-size: 1.5rem;
+}
+
+.success-message p {
+  color: #047857;
+  margin-bottom: 0.5rem;
+}
+
+.confirmation-email {
+  font-weight: 600;
+}
+
+/* Booking Info Sidebar */
+.booking-info {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.booking-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.info-box {
+  background: var(--light-bg);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--primary-color);
+}
+
+.info-box h4 {
+  font-size: 1rem;
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+}
+
+.info-box ol {
+  margin-left: 1.5rem;
+  color: var(--text-light);
+}
+
+.info-box li {
+  margin-bottom: 0.5rem;
+}
+
+.info-box p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .booking-form-page .page-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .form-container {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+
+  fieldset {
+    padding: 1rem;
+  }
+
+  legend {
+    font-size: 1rem;
+  }
+}

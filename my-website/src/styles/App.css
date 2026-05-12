@@ -1,0 +1,165 @@
+/* App.css - Main Application Styles */
+
+/* CSS Variables for consistent theming */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --success-color: #27ae60;
+  --warning-color: #f39c12;
+  --light-bg: #f8f9fa;
+  --dark-bg: #2c3e50;
+  --text-light: #0f0f0f;
+  --text-dark: #333333;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--light-bg);
+}
+
+/* App Wrapper */
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  padding: 0;
+  min-height: calc(100vh - 120px); /* Account for navbar and footer */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    min-height: calc(100vh - 140px); /* Adjust for mobile navbar */
+  }
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #1a252f;
+}
+
+.btn-danger {
+  background-color: var(--accent-color);
+}
+
+.btn-danger:hover {
+  background-color: #c0392b;
+}
+
+/* Loading States */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  font-size: 18px;
+  color: var(--secondary-color);
+}
+
+/* Error States */
+.error {
+  background-color: #fee;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 12px;
+  border-radius: var(--border-radius);
+  margin: 10px 0;
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Icon Styles */
+svg {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.rating svg {
+  color: #f39c12;
+  margin-right: 0.2rem;
+}
+
+.benefit-card h3 svg,
+.info-card h3 svg,
+.member-avatar svg {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.highlights-list svg,
+.included-list svg {
+  color: var(--success-color);
+  font-size: 1.2rem;
+}
+
+.booking-note svg {
+  color: var(--warning-color);
+  font-size: 1.2rem;
+}
